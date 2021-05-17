@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "https://fonts.googleapis.com/css2? family = Great + Vibes & display = swap" rel = "feuille de style">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+</head>
+<body>
+    <main>
+        <nav id="nav-bar">
+            <div class="toggle-button" id="toggle-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <a href="index.html">
+                <div class="icone">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="texte">
+                    À l'accueil
+                </div>
+            </a>
+            <a href="evenement.html">
+                <div class="icone">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="texte">
+                    Evénement
+                </div>
+            </a>
+            <a href="realisation.html">
+                <div class="icone">
+                    <i class="fas fa-brush"></i>
+                </div>
+                <div class="texte">
+                    Réalisations
+                </div>
+            </a>
+            <a href="equipe.html">
+                <div class="icone">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="texte">
+                    Équipe
+                </div>
+            </a>
+            <a href="contact.html">
+                <div class="icone">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <div class="texte">
+                    Contact
+                </div>
+            </a>
+        </nav>
+    </main>
+    
+
+   
+    
+    <form action="POST" action="contact.php" class="form">
+        <h1 class="title">Contactez-nous</Contactez-nous></h1>
+        <div class="champs">
+            <label for="nom" class="form_label">Votre nom</label>
+            <input type="text" name="nom" id="nom" placeholder="Votre nom" class="form_input">
+        </div>
+
+        <div class="champs">
+            <label for="prenom" class="form_label">Votre prénom</label>
+            <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" class="form_input">
+        </div>
+
+        <div class="champs">
+            <label for="email" class="form_label">Votre adresse mail</label>
+            <input type="email" name="email" id="email" placeholder="@mail" class="form_input" required>
+        </div>
+
+        <div class="champs">
+            <label for="message" class="form_label">Votre message</label>
+            <textarea name="textarea"rows="10" cols="30" class="form_input">Vous pouvez écrire ici.</textarea>
+        </div>
+        
+        <div class="submit">
+            <button type="submit" id="envoyer" class="submit_btn">envoyer</button>
+        </div>
+        
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

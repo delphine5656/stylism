@@ -1,0 +1,554 @@
+
+/*--------------general----------------*/
+ *, ::after, ::before {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+
+
+h2, h3{
+     text-align: center;
+     color: rgb(188, 236, 148);
+     font-weight: 900;
+     margin: 4%;
+     font-family: 'Great Vibes', cursive;
+     font-size: 25px;
+     }
+    
+h1{
+    
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+}
+
+p{
+    text-align: justify;
+}
+
+/*----------------------ecran mobile----*/
+@media  screen and (max-width: 767px) {
+    main {
+        width: 100vw;
+        background-color: rgb(188, 236, 148);
+    }
+    #nav-bar{
+       position: relative;
+        width: 100%;
+        height:100%;
+        background-color:rgb(188, 236, 148);
+        left: -80px;
+        transition: .5s ease-in-out;
+        z-index: 4;
+    }
+    
+    /*--icone--*/
+    .toggle-button{
+       position: absolute;
+        top: 30px;
+        left: 110px;
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+    
+    }
+    
+    .toggle-button span {
+        width: 60px;
+        height: 10px;
+        border-radius: 5px;
+        background-color:rgb(37, 224, 31);
+        display: block;
+        margin-top: 4px;
+        transition: 0.5s ease;
+    }
+    #nav-bar.active {
+        left: 0px;
+    }
+    
+    #nav-bar.active .toggle-button {
+        top: 2.8rem;
+        left: 235px;
+    }
+    
+    #nav-bar.active span{
+        position: absolute;
+    }
+    
+    #nav-bar.active span:nth-child(1) { /*on va chercher le premier span*/
+        transform: rotate(45deg);
+    }
+    
+    #nav-bar.active span:nth-child(2) { /*on va chercher le 2 span*/
+        opacity: 0;
+    }
+    
+    #nav-bar.active span:nth-child(3) { /*on va chercher le 3 span*/
+        transform: rotate(-45deg);
+    }
+    
+    #nav-bar.active ~ .content {
+        opacity: 0.3s;
+    }
+
+    #nav-bar a{
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+        
+    }
+
+}
+
+/*----------------------ecran plus grand----*/
+@media  screen and (min-width: 768px) {
+#nav-bar{
+    display: flex;
+    flex-direction: column;background-color: rgb(188, 236, 148);
+}
+
+#nav-bar a{
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+#nav-bar a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+
+     #nav-bar{
+         flex-flow: row wrap; /* en ligne*/
+         justify-content: space-between; /*sur tte la longueur*/
+     }
+     #nav-bar a {
+         flex: 1 0 auto;
+         text-align: center;
+     }
+ }
+
+ .icone{
+     font-size: 1.2em;
+     align-self: flex-start;
+ }
+/*--------------header-------------*/
+ .header{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 450px;
+     background-color:rgb(188, 236, 148);
+
+ }
+
+.pinup{
+    
+    display: flex;
+    height: 400px;
+    width: 250px;
+    align-self: flex-end;
+    margin-right: 25%;
+}
+
+.titre{
+   text-align: center;
+   font-family: 'Great Vibes', cursive;
+   font-size: 75px;
+  
+}
+ 
+.p-intro{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+@media  screen and (max-width: 750px) {
+    .header{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;
+        background-color:rgb(188, 236, 148);
+   
+    }
+    .pinup{
+    
+        display: flex;
+        height: 200px;
+        width: 100px;
+        align-self: auto;
+        padding: 2%;
+    }
+    .titre{
+        font-size: 40px;
+       
+    }
+    .p-intro{
+        display: flex;
+        flex-direction: column;
+       
+    }
+}
+ /*------------A propos-------------*/
+
+#props{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.women-tailleur{
+    width: 350px;
+    height: 500px;
+}
+
+
+.p-props{
+    text-align: justify ;
+    padding: 3%;
+    line-height: 30px;
+}
+
+@media  screen and (max-width: 765px){
+    .women-tailleur{
+        width: 0px;
+        height: 0px;
+    }
+    }
+
+
+/*-----------témoignages client---------*/
+#temoignage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    border: 3px solid rgb(188, 236, 148);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(49, 49, 49);
+    padding: 10px;
+    margin: 2%;
+}
+
+.avatar{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 1%;
+}
+
+.author{
+    text-align: end;
+    font-size: small;
+    color: rgb(188, 236, 148);
+}
+
+@media  screen and (min-width: 768px){
+    #temoignage{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    #container{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 600px;
+        border: 3px solid rgb(188, 236, 148);
+        border-radius: 10px;
+        padding: 5px;
+        margin: 2%;
+    } 
+}
+
+/*--------Page réalisation galerie d'image----------------*/
+
+#images{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+.tenue{
+    width: 300px;
+    height: 500px;
+    margin: 2%;
+}
+
+@media  screen and (min-width: 768px){
+    #images{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+
+        
+    }
+
+    .tenue{
+        width: 400px;
+        height: 600px;
+        margin: 2%;
+    }
+
+}
+
+/*------------formulaire de contact--------------*/
+
+    .form{
+    background-image: url('image/pinup.png');
+    background-repeat: no-repeat;
+    background-position: -110px 0 ;
+    }
+    
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-end;
+    background-color: rgb(188, 236, 148);
+    padding: 20%;
+    height: 100vh;
+    border-radius: 10px;
+    
+}
+
+.champs{
+    margin: 1%;
+}
+
+.form_label{
+    text-align: left;
+    
+}
+
+#message{
+    height: 200px;
+}
+
+.title{
+    text-align: center;
+    margin: 4%;
+    
+}
+
+@media  screen and (max-width: 765px){
+    .form{
+      background-size: 0 0 ;
+    
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px){
+    .form{
+        background-image: url('image/pinup.png');
+        background-repeat: no-repeat;
+        background-position: -30px 270px ;
+        background-size: 300px 500px ;
+    
+    }
+
+}
+/*---------------------------Evènements----------------*/
+#evenement{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    margin: 7% 3% 3% 7%;
+
+}
+
+.main{
+    height: 700px;
+    width: 400px;
+   
+    
+}
+
+@media  screen and (max-width: 765px){
+    #evenement{
+      display: flex;
+      flex-direction: column;
+      
+    
+    }
+    .main{
+        height: 700px;
+        width: 290px;
+    }
+
+    img .img-main{
+        width: 200px;
+        height: 500px;
+    }
+    .bg{
+        width: 290px;
+    }
+ p{
+     width: 290px;
+ }
+}
+
+.img-main{
+    width: 300px;
+    height: 500px;
+}
+
+.bg {
+    background-color: rgb(188, 236, 148);
+    width: 290px;
+}
+
+.title-color{
+    color: rgb(0, 0, 0);
+}
+
+.p-main{
+    text-align: center;
+    margin-bottom: 3%;
+    font-weight: 800;
+}
+/*----------------equipe---*/
+#equipe{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/*-------card animé*/
+
+.card{
+    margin: 100px auto 0;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+ .card_inner{
+     width: 100%;
+     height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+ }
+.card_inner.is-flipped {
+   transform: rotateY(180deg); 
+
+}
+
+.card_face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 12px 12px 2px 1px rgba(44, 48, 44, 0.5);
+}
+
+.card_face--front {
+    background-image: radial-gradient(circle at 77% 36%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 36% 66%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 58% 54%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 1% 75%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 58% 35%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 94% 26%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 72% 22%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 31% 43%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 40% 61%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 5%,transparent 5%, transparent 100%),linear-gradient(90deg, rgb(195,250,129),rgb(106, 236, 176));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_face--front h2 {
+    color: #fff;
+    font-size: 32px; 
+}
+
+.card_face--back{
+    background-image: radial-gradient(circle at 77% 36%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 36% 66%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 58% 54%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 1% 75%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 58% 35%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 8%,transparent 8%, transparent 100%),radial-gradient(circle at 94% 26%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 72% 22%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 31% 43%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 40% 61%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 5%,transparent 5%, transparent 100%),linear-gradient(90deg, rgb(195,250,129),rgb(106, 236, 176));
+    transform: rotateY(180deg);
+}
+
+
+.card_content {
+    width: 100%;
+    height: 100%;
+}
+
+.card_header{
+    position: relative;
+    padding: 30px 30px 40px;
+}
+ 
+.card_header:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /*border-radius: 0 0 50% 0px;
+    background-color: rgb(150, 255, 80);*/
+}
+
+.pp {
+    display: block;
+    width: 128px;
+    height: 120px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+.card_header h2{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card_header h3{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*-----------footer------*/
+#footer{
+    display: flex;
+    background-color: rgb(188, 236, 148);
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
